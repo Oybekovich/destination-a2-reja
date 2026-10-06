@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Destination A2: 6 haftalik reja</title>
+<meta name="description" content="Destination A2 kitobini 6 haftada tugatish rejasi: kunlik kalendar, belgilash va progress.">
+<meta name="theme-color" content="#2446c4">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="A2 reja">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="topline">
+      <div class="eyebrow">Destination A2 · Grammar &amp; Vocabulary</div>
+      <button id="install" class="install" type="button" hidden>O'rnatish</button>
+    </div>
+    <h1>42 unit, 6 hafta</h1>
+    <p class="lead">6-oktabrdan 16-noyabrgacha har kuni 1 unit. Shanba kuni 2 unit, yakshanba test va takrorlash. Kunni tugatgach, kalendarda o'sha kunni bos, belgilanib qoladi.</p>
+  </header>
+
+  <div class="today-card" id="today" hidden></div>
+
+  <div class="stats">
+    <div class="stat key"><b>50–60 daq</b><span>ish kunlari, har kuni</span></div>
+    <div class="stat"><b>~75 daq</b><span>shanba (2 unit)</span></div>
+    <div class="stat"><b>~45 daq</b><span>yakshanba (test)</span></div>
+    <div class="stat"><b>~6 soat</b><span>haftasiga jami</span></div>
+  </div>
+
+  <section>
+    <h2>Kalendar</h2>
+    <div class="progress"><div class="bar"><i id="bar"></i></div><span class="ptext" id="ptext">0 / 42 unit</span></div>
+    <div id="cal" class="cal"></div>
+    <p class="note">Belgilar shu qurilmada saqlanadi (internet bo'lmasa ham ishlaydi).</p>
+  </section>
+
+  <section>
+    <h2>Haftalik ritm</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Kun</th><th>Nima qilamiz</th><th>Vaqt</th></tr></thead>
+      <tbody>
+        <tr><td>Dushanba – Juma</td><td>1 ta yangi unit (grammatika yoki vocabulary) + 15 ta yangi so'z</td><td class="t">50–60 daq</td></tr>
+        <tr><td>Shanba</td><td>2 ta unit, biri yengilroq vocabulary unit + 15 ta so'z</td><td class="t">~75 daq</td></tr>
+        <tr><td>Yakshanba</td><td>Haftalik test, xatolar ustida ishlash, 1 ta listening (Listening Time Podcast yoki BBC 6 Minute English)</td><td class="t">~45 daq</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Bitta dars tartibi</h2>
+    <div class="steps">
+      <div class="step"><div class="m">5 daqiqa</div><h3>So'z takrorlash</h3><p>Spaced repetition: 1, 3, 7 va 14 kun oldingi so'zlar.</p></div>
+      <div class="step"><div class="m">30–40 daqiqa</div><h3>Unit</h3><p>Qoida, misollar, kitobdagi mashqlar. Xatolarni darhol to'g'rilaymiz.</p></div>
+      <div class="step"><div class="m">10 daqiqa</div><h3>Uy vazifasi</h3><p>Ertangi dars boshida tekshiriladi.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qoidalar</h2>
+    <ul class="rules">
+      <li>Dars qoldirsang, keyingi yakshanba testdan oldin o'sha unitni o'tib olasan. Ikki kun ketma-ket qoldirsang, tugash sanasi 1 haftaga suriladi.</li>
+      <li>Qiyin unitda to'xtab qolsang, o'qituvchingdan so'ra yoki menga yoz, keyingi unitga o'tmaymiz.</li>
+      <li>Kuniga 1 soat juda og'ir bo'lsa, zaxira reja: haftasiga 5 unit, dekabr boshida tugaydi.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Zaxira nusxa</h2>
+    <p class="note">Belgilarni boshqa qurilmaga ko'chirish uchun nusxa ol va u yerda tikla.</p>
+    <div class="row">
+      <button type="button" class="btn" id="export">Nusxa olish</button>
+      <button type="button" class="btn" id="import">Tiklash</button>
+      <button type="button" class="btn ghost" id="reset">Hammasini tozalash</button>
+    </div>
+    <p class="note" id="msg" role="status"></p>
+  </section>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
